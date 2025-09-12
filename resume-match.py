@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 import fitz
 import numpy as np
