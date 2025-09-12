@@ -9,7 +9,7 @@ Deployed on **Streamlit Cloud**
 ## Project Highlights  
 
 - **Resume–Job Fit Scoring**: Calculates a match score using embeddings + cosine similarity.  
-- **Job Requirement Extraction**: Summarizes any job posting into 3–5 actionable requirements.  
+- **Job Requirement Extraction**: Summarizes any job posting into 3–5 requirements.  
 - **Resume Summarization**: Condenses candidate experience into concise bullet points.  
 - **🖋Tailored Resume Generation**: Produces a **one-page, ATS-friendly resume** aligned to the target role.  
 - **Recommendations**: Offers alignment tips and career guidance in plain language.  
