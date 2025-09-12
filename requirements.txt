@@ -3,8 +3,6 @@ numpy==1.26.4
 scikit-learn==1.5.2
 openai==1.51.2
 langchain==0.3.7
-langchain-core==0.3.15
-langchain-community==0.3.7
 
 
 
