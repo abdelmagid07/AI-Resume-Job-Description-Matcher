@@ -9,9 +9,15 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 
-# Load API keys
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+# Load API key
+st.sidebar.header("⚡ OpenAI API Key")
+st.sidebar.markdown(
+    "Get an API key [here](https://platform.openai.com/account/api-keys) if you don't have one.")
+api_key = st.sidebar.text_input(
+    "Enter your OpenAI API Key", type="password")
+
+if not user_api_key:
+    st.warning("Please enter your OpenAI API key to use the app.")
 
 # Initialize OpenAI client
 client = OpenAI(api_key=api_key)
