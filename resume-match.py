@@ -123,7 +123,7 @@ def find_jobs(resume_text):
     prompt = f"""
 A candidate has the following resume:
 {resume_text}
-Find 10 relevant job opportunities online that match this resume. 
+Find 5 relevant job postings online that match this resume. 
 If theyre still in school, include internships. If done with school, do not include internships. 
 If they are a senior level candidate, include senior roles.
 They should be recent postings from reputable sources. 
@@ -215,3 +215,4 @@ else:
             st.info("📥 Upload your resume and paste a job description to get started.")
     except Exception as e:
         st.error(f"❌ An error occurred: {str(e)}")
+
