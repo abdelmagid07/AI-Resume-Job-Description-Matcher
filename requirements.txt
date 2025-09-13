@@ -2,8 +2,7 @@ PyMuPDF==1.24.9
 numpy==1.26.4
 scikit-learn==1.5.2
 openai==1.51.2
-langchain
-langchain_community
+langchain==0.3.76
 
 
 
