@@ -14,8 +14,6 @@ st.sidebar.markdown(
 api_key = st.sidebar.text_input(
     "Enter your OpenAI API Key", type="password")
 
-# Initialize OpenAI client
-client = OpenAI(api_key=api_key)
 
 # Streamlit UI setup
 st.set_page_config(page_title="📝 AI Resume Matcher", layout="wide")
@@ -147,6 +145,9 @@ if not api_key:
     st.warning("Please enter your OpenAI API key to use the app.")
 else:
     try:
+        # Initialize OpenAI client
+        client = OpenAI(api_key=api_key)
+        
         # Run if both inputs are present
         if resume_file and job_description_input.strip():
             resume_text = extract_text(resume_file)
