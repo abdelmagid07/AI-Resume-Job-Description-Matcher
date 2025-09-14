@@ -8,7 +8,7 @@ from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 
 # Load API key
-st.sidebar.header("⚡OpenAI API Key")
+st.sidebar.header("OpenAI API Key")
 st.sidebar.markdown(
     "Get an API key [here](https://platform.openai.com/account/api-keys) if you don't have one.")
 api_key = st.sidebar.text_input(
@@ -166,13 +166,13 @@ else:
             st.write(f"**{similarity_pct:.2f}%** match with job description")
             st.progress(int(similarity_pct))
             if similarity_pct > 65:
-                st.success("🎯 Excellent match! Very strong alignment.")
+                st.success("Excellent match! Very strong alignment.")
             elif similarity_pct > 45:
-                st.info("✅ Good match! Your resume fits the job fairly well.")
+                st.info("Good match! Your resume fits the job fairly well.")
             elif similarity_pct > 25:
-                st.warning("⚠️ Partial match. Consider tailoring your resume more.")
+                st.warning("Partial match. Consider tailoring your resume more.")
             else:
-                st.error("❌ Weak match. Consider major edits.")
+                st.error("Weak match. Consider major edits.")
 
             # Summaries & recommendations
             with st.spinner("Summarizing job description..."):
@@ -183,24 +183,24 @@ else:
                 recommendations = generate_rec(resume_text, job_text)
 
             # Display comparison
-            st.subheader("📊 Job vs Resume Comparison")
+            st.subheader("Job vs Resume Comparison")
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown("### 💼 Job Requirements")
-                st.markdown(f"📝 {job_summary}")
+                st.markdown(f"{job_summary}")
             with col2:
                 st.markdown("### 📄 Your Resume")
-                st.markdown(f"✅ {resume_summary}")
+                st.markdown(f"{resume_summary}")
 
             # AI recommendations
-            st.subheader("📝 AI Recommendations")
+            st.subheader("AI Recommendations")
             st.info(f"💡 {recommendations}")
 
             # Example tailored resume
             if st.button("🖋️ Generate Example Tailored Resume"):
                 with st.spinner("Generating a tailored example resume..."):
                     example_resume = generate_ex(resume_text, job_text)
-                    st.subheader("📄 Example Tailored Resume")
+                    st.subheader("Example Tailored Resume")
                     st.text_area("Sample Resume", example_resume, height=400)
                     st.download_button("📥 Download Example Resume", example_resume, "example_resume.txt")
 
@@ -208,11 +208,12 @@ else:
             if st.button("🌐 Find Jobs that Match Resume"):
                 with st.spinner("Searching for jobs..."):
                     resources = find_jobs(resume_text)
-                    st.subheader("🔗 Job Oppurtunities Based on Resume")
+                    st.subheader("Job Oppurtunities Based on Resume")
                     st.markdown(resources)
 
         else:
-            st.info("📥 Upload your resume and paste a job description to get started.")
+            st.info("Upload your resume and paste a job description to get started.")
     except Exception as e:
         st.error(f"❌ An error occurred: {str(e)}")
+
 
