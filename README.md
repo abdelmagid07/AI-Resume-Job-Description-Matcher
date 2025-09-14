@@ -1,4 +1,4 @@
-# 📝 AI Resume vs Job Description Matcher  
+# AI Resume vs Job Description Matcher  
 
 An **AI-powered career platform** that intelligently compares resumes to job descriptions, generates **ATS-optimized tailored resumes**, and provides recommendations for job seekers.  
 
@@ -17,7 +17,7 @@ Deployed on **Streamlit Cloud**
 
 ---
 
-## 🚀 Tech + Skills Demonstrated  
+## Tech + Skills Demonstrated  
 
 - **AI/LLMs**: OpenAI GPT, LangChain  
 - **NLP & Vector Search**: Text embeddings + cosine similarity (scikit-learn, NumPy)  
@@ -26,7 +26,7 @@ Deployed on **Streamlit Cloud**
 
 ---
 
-## 📸 Live Demo  
+## Live Demo  
 
 🔗 [**Try the App on Streamlit Cloud →**](https://ai-resume-job-description-matcher.streamlit.app/)  
 
