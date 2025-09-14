@@ -137,8 +137,8 @@ Format as a numbered list with links if possible.
     return response.output_text.strip()
 
 # File upload & job description input
-resume_file = st.file_uploader("📎 Upload Resume (PDF)", type=["pdf"])
-job_description_input = st.text_area("📝 Paste Job Description Text", height=250)
+resume_file = st.file_uploader("Upload Resume (PDF)", type=["pdf"])
+job_description_input = st.text_area("Paste Job Description Text", height=250)
 
 # Check for API key
 if not api_key:
@@ -215,5 +215,6 @@ else:
             st.info("Upload your resume and paste a job description to get started.")
     except Exception as e:
         st.error(f"❌ An error occurred: {str(e)}")
+
 
 
